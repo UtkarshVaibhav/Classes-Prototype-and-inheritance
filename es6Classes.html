@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// Implement a multi-level inheritance using ES6 class.
+// take a real life inheritance example and simulate it using ES6 classes.
+class School{
+    constructor(name,location) {
+        this.scholName=name;
+        this.location=location;
+    }
+}
+class Teacher extends School{
+    constructor(name,location,n,sub) {
+        super(name,location)
+        this.teacherName=n;
+        this.subject=sub;
+    }
+
+}
+class Student extends Teacher{
+    constructor(name,location,n,sub,nme,age,cls) {
+        super(name,location,n,sub);
+        this.studentName=nme;
+        this.age=age;
+        this.class=cls;
+    }
+}
+let student=new Student("dba","patna","DK",'Physics',"UV",15,10);
+console.log(student);
+</script>
